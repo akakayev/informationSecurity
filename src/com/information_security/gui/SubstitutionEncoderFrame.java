@@ -7,7 +7,7 @@ import com.information_security.encrypters.SubstitutionEncoder;
 public class SubstitutionEncoderFrame extends javax.swing.JFrame {
 
     public SubstitutionEncoderFrame() {
-    	super("Шифратор/Деширатор");
+    	super("Подстановки");
         initComponents();
     }
     

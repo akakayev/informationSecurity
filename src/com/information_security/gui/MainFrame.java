@@ -5,6 +5,7 @@ import javax.swing.ButtonGroup;
 public class MainFrame extends javax.swing.JFrame {
 
     public MainFrame() {
+    	super("Шифратор/Деширатор");
         initComponents();
     }
     
@@ -18,7 +19,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jRadioButton1.setText("метод подстановок");
         jRadioButton1.setActionCommand("1");
-        jRadioButton2.setText(" с помощью датчика ПСЧ");
+        jRadioButton2.setText("метод гаммирования (ПСЧ)");
         jRadioButton2.setActionCommand("2");
         jRadioButton1.setSelected(true);
         group = new ButtonGroup();
@@ -70,7 +71,8 @@ public class MainFrame extends javax.swing.JFrame {
 			substitutionEncoderFrame.open();
 			break;
 		case "2":
-			
+			RandomXorEncoderFrame randomXorEncoderFrame = new RandomXorEncoderFrame();
+			randomXorEncoderFrame.open();
 			break;
 		default:
 			break;
