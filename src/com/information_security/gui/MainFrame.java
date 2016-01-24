@@ -13,6 +13,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -21,10 +22,13 @@ public class MainFrame extends javax.swing.JFrame {
         jRadioButton1.setActionCommand("1");
         jRadioButton2.setText("метод гаммирования (ПСЧ)");
         jRadioButton2.setActionCommand("2");
+        jRadioButton3.setText("сеть Фейштеля");
+        jRadioButton3.setActionCommand("3");
         jRadioButton1.setSelected(true);
         group = new ButtonGroup();
         group.add(jRadioButton1);
         group.add(jRadioButton2);
+        group.add(jRadioButton3);
 
         jButton1.setText("Выбрать");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -43,6 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(72, 72, 72)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton1)
+                            .addComponent(jRadioButton3)
                             .addComponent(jRadioButton2)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(105, 105, 105)
@@ -56,6 +61,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jRadioButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton3)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap(34, Short.MAX_VALUE))
@@ -73,6 +80,10 @@ public class MainFrame extends javax.swing.JFrame {
 		case "2":
 			RandomXorEncoderFrame randomXorEncoderFrame = new RandomXorEncoderFrame();
 			randomXorEncoderFrame.open();
+			break;
+		case "3":
+			FeistelNetworkEncoderFrame feistelNetworkEncoderFrame = new FeistelNetworkEncoderFrame();
+			feistelNetworkEncoderFrame.open();
 			break;
 		default:
 			break;
@@ -109,5 +120,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     // End of variables declaration                   
 }

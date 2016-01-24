@@ -1,6 +1,7 @@
 package com.information_security.encrypters;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,10 +14,12 @@ public class SubstitutionEncoder implements Encrypt {
 	private Map<Character, Character> decryptTable;
 
 	public SubstitutionEncoder() {
+//		File file = new File("/home/artyom/Desktop/s.txt");
+		File file = new File("C:\\Users\\Артём\\Desktop\\учеба\\ЗИ\\laba1_ID\\src\\s.txt");
 		encryptTable = new HashMap<Character, Character>();
 		decryptTable = new HashMap<Character, Character>();
 		try (BufferedReader in = new BufferedReader(
-				new FileReader("C:\\Users\\Артём\\Desktop\\учеба\\ЗИ\\laba1_ID\\src\\s.txt"))) {
+				new FileReader(file))) {
 			String line = "";
 			while ((line = in.readLine()) != null) {
 				encryptTable.put(line.charAt(0), line.charAt(line.length() - 1));
