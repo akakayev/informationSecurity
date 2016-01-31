@@ -8,7 +8,7 @@ import com.information_security.encrypters.SubstitutionEncoder;
 public class FeistelNetworkEncoderFrame extends javax.swing.JFrame {
 
     public FeistelNetworkEncoderFrame() {
-    	super("Подстановки");
+    	super("Сеть Фейштеля");
         initComponents();
     }
     

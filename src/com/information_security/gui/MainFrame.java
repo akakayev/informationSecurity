@@ -14,6 +14,7 @@ public class MainFrame extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -24,11 +25,14 @@ public class MainFrame extends javax.swing.JFrame {
         jRadioButton2.setActionCommand("2");
         jRadioButton3.setText("סועü װוירעוכÿ");
         jRadioButton3.setActionCommand("3");
+        jRadioButton4.setText("אכדמנטעל RSA");
+        jRadioButton4.setActionCommand("4");
         jRadioButton1.setSelected(true);
         group = new ButtonGroup();
         group.add(jRadioButton1);
         group.add(jRadioButton2);
         group.add(jRadioButton3);
+        group.add(jRadioButton4);
 
         jButton1.setText("ֲûבנאעü");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -48,6 +52,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton1)
                             .addComponent(jRadioButton3)
+                            .addComponent(jRadioButton4)
                             .addComponent(jRadioButton2)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(105, 105, 105)
@@ -63,6 +68,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jRadioButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton4)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap(34, Short.MAX_VALUE))
@@ -84,6 +91,10 @@ public class MainFrame extends javax.swing.JFrame {
 		case "3":
 			FeistelNetworkEncoderFrame feistelNetworkEncoderFrame = new FeistelNetworkEncoderFrame();
 			feistelNetworkEncoderFrame.open();
+			break;
+		case "4":
+			RSAEncryptFrame RSAEncoderFrame = new RSAEncryptFrame();
+			RSAEncoderFrame.open();
 			break;
 		default:
 			break;
@@ -121,5 +132,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
     // End of variables declaration                   
 }
