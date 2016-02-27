@@ -204,11 +204,25 @@ public class RSAEncryptFrame extends javax.swing.JFrame {
 	}
 
 	private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-		if (jRadioButton1.isSelected()) {
-			jTextArea2.setText(encoder.encrypt(jTextArea1.getText().toString()));
+		boolean b= true;
+		char c=' ';
+		for (int i = 0; i < jTextArea1.getText().length(); i++) {
+			if(jTextArea1.getText().charAt(i)>2921){
+				b=false;
+				c=jTextArea1.getText().charAt(i);
+				break;
+			}
+		}
+		if(!b){
+			JOptionPane.showMessageDialog(null, "введены недопустимые символы ( "+c+")");
 		}
 		else{
-			jTextArea2.setText(encoder.decrypt(jTextArea1.getText().toString()));
+			if (jRadioButton1.isSelected()) {
+				jTextArea2.setText(encoder.encrypt(jTextArea1.getText().toString()));
+			}
+			else{
+				jTextArea2.setText(encoder.decrypt(jTextArea1.getText().toString()));
+			}	
 		}
 	}
 

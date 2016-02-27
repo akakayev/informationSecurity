@@ -96,10 +96,4 @@ public class RSAEncoder implements Encrypt {
 	public int getE() {
 		return e;
 	}
-
-	public static void main(String[] args) {
-		RSAEncoder encoder = new RSAEncoder(5, 41);
-		System.out.println(encoder.encrypt("secure message encryption"));
-		System.out.println(encoder.decrypt(encoder.encrypt("secure message encryption")));
-	}
 }

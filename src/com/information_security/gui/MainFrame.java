@@ -101,7 +101,7 @@ public class MainFrame extends javax.swing.JFrame {
 		}
     }                                        
 
-    public static void main(String args[]) {
+    public  void open() {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

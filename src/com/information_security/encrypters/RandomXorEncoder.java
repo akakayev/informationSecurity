@@ -36,12 +36,17 @@ public class RandomXorEncoder implements Encrypt {
 
 	@Override
 	public String decrypt(String input) {
-		generateTArray(input.length());
-		StringBuilder result = new StringBuilder();
-		for (int i = 0; i < input.length(); i++) {
-			result.append((char) (input.charAt(i) ^ T[i]));
+		try{
+			generateTArray(input.length());
+			StringBuilder result = new StringBuilder();
+			for (int i = 0; i < input.length(); i++) {
+				result.append((char) (input.charAt(i) ^ T[i]));
+			}
+			return result.toString();	
 		}
-		return result.toString();
+		catch(Exception e){
+			return null;
+		}
 	}
 
 	private void generateTArray(int length) {
